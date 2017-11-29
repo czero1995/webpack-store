@@ -1,0 +1,112 @@
+@import "base.less";
+#address{
+    text-align: center;
+}
+.content{
+    padding: .2rem;
+}
+.model-content-city {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: .15rem;
+  margin: auto;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.addressBox{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5.1rem;
+    z-index: 9;
+    background: #grey;
+    display: block!important;
+}
+.addressItem{
+        margin-top: .3rem;
+}
+.addressBox ul{
+    width: 33%;
+    height: 5.1rem;
+    background: #E6E6E6;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+.addressBox li{
+    height: 0.62rem;
+    color: #666;
+    text-align: center;
+    line-height: 0.62rem;
+}
+.cityBox{
+    position: absolute;
+    top: 0;
+    left: 33%;
+    width: 100%;
+    height: 5.1rem;
+    display: none;
+    overflow-y: scroll;
+    z-index: 19;
+    background: #E6E6E6;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+}
+.cityBox ul{
+    width: 100%;
+    height: 5.1rem;
+}
+.cityBox li{
+    padding-left: 0.17rem;
+    text-align: left;
+    border-bottom: 0.01rem solid #e6e6e6;
+}
+.areaBox{
+position: absolute;
+    top: 0;
+    left: 33%;
+    width: 33%;
+    height: 5.1rem;
+    display: none;
+    overflow-y: scroll;
+    z-index: 9999;
+    -webkit-overflow-scrolling: touch;
+}
+.item-img{
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-right: 0.2rem;
+    vertical-align: middle;
+}
+
+.pageBottom{
+    background: @theme;
+    color:@white;
+    text-align: center;
+}
+input{
+    font-size: 0.32rem;
+    flex: 1;
+    text-align: center;
+    margin-left: .2rem;
+    border:1px solid #ccc;
+}
+/*点击省份，出现城市*/
+.addressBox .active{
+    background: @theme;
+    color:@white
+}
+.addressBox .active .cityBox{
+    display: block;
+}
+/*点击城市，出现区域*/
+.cityBox .active{
+    background: @theme;
+    color:@white
+}
+.cityBox .active .areaBox{
+    display: block;
+}

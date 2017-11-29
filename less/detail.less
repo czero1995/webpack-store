@@ -1,0 +1,188 @@
+@import "base.less";
+#app {
+    background: @background;
+}
+
+.container {
+    margin-bottom: .8rem;
+}
+
+.goodsBox {
+    background: @white;
+    padding: 0.2rem 0.4rem;
+    margin-top: 0.2rem;
+}
+
+.goods-img {
+    width: 100%;
+    height: 3rem;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.goods-name {
+    font-size: 0.24rem;
+    margin-bottom: 0.1rem;
+}
+
+.goods-coachBox {
+    justify-content: flex-end;
+    font-size: 0.24rem;
+}
+
+.goods-coachNew {
+    color: @red;
+    margin-right: 0.2rem;
+}
+
+.goods-coachOld {
+    text-decoration: line-through;
+}
+
+.goodsDetail {
+    background: @white;
+    margin-top: 0.2rem;
+    padding: 0.2rem;
+}
+
+.goodsDetail img {
+    width: 100%;
+}
+
+.cartImg {
+    width: 20%;
+    height: 0.88rem;
+    text-align: center;
+    img {
+        width: 0.4rem;
+        margin-top: 0.22rem;
+        height: 0.4rem;
+    }
+}
+
+.addCart {
+    width: 40%;
+    text-align: center;
+    background: orange;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    color: @white!important;
+    span {
+        height: 0.88rem;
+        line-height: 0.88rem!important;
+    }
+}
+
+.addCart-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: .15rem;
+    margin: auto;
+    width: 80%;
+    height: 3.3rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.addPay {
+    width: 40%;
+    text-align: center;
+    background: @theme;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    color: @white!important;
+    span {
+        height: 0.88rem;
+        line-height: 0.88rem!important;
+    }
+}
+
+.addCart-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 3.5rem;
+    background-color: #fff;
+}
+
+.cartModel-box {
+    align-items: flex-start;
+    padding: 0.2rem;
+    border-bottom: 1px solid @grey;
+}
+
+.cartModel-img {
+    width: 1.4rem;
+    height: 1.4rem;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.cartModel-text {
+    width: 100%;
+    margin-left: .3rem;
+}
+
+.cartModel-coach {
+    color: @red;
+    text-align: left;
+    margin-top: .2rem;
+}
+
+.cartModel-bottom {
+    padding: 0.2rem;
+}
+
+.cartModel-op {
+    img {
+        vertical-align: middle;
+    }
+    input {
+        border: 1px solid @grey !important;
+        height: 0.4rem;
+        text-align: center;
+        color: @black;
+        width: 1rem;
+        vertical-align: middle;
+        font-size: 0.32rem;
+    }
+}
+
+.cartModel-addCart {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    background: @red;
+    color: @white;
+    text-align: center;
+}
+
+.cartModel-pay {
+    width: 100%;
+    background: @red;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: @white;
+}
+
+.cartClose {
+    width: 0.4rem;
+    height: 0.4rem;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    background: @white;
+    width: 100%;
+}
+

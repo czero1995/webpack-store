@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<title>地址详情</title>
+
+	</head>
+
+	<body>
+
+		<div id="app">
+
+			<div class="container" v-cloak>
+
+				<div class="header clearfloat" @click="onBack()" id="topBar">					
+						<img src="../img/icon/arrowBack.png" />
+					<p>添加地址</p>
+				</div>
+				<div class="content">
+					<div class="addressItem inlinkFlex" @click="addModel=true">
+						<p>所在地区</p>
+						<input type="text" placeholder="选择地区" :value="addressaText" readonly="" />
+
+					</div>
+					<div class="addressItem inlinkFlex">
+						<p>详细地址</p>
+						<input type="text" placeholder="请输入到小区门牌号码" v-model="addressDetail.address" />
+					</div>
+					<div class="addressItem inlinkFlex">
+						<p>收货人姓名</p>
+						<input type="text" placeholder="收货人姓名" v-model="addressDetail.consignee" />
+
+					</div>
+					<div class="addressItem inlinkFlex">
+						<p>手机号码</p>
+						<input type="text" placeholder="收货人常用手机号码" v-model="addressDetail.mobile" />
+					</div>
+					<div class="addressItem inlinkFlex">
+						<p>邮政编码</p>
+						<input type="text" placeholder="请输入邮政编码" v-model="addressDetail.zipcode" />
+					</div>
+					<div class="addressDefault inlinkFlex" @click="onSelectDefault()">
+						<img src="../img/icon/radio.png"  v-show="addressDetail.is_default == '2'"/>
+						<img src="../img/icon/radio_select.png" v-show="addressDetail.is_default == '1'"/>
+						<span>设为默认地址</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="pageBottom">
+				<div class="inlinkFlex-around">
+					<p @click="onDel()">删除地址</p>
+					<p @click="onSave()">保存</p>
+				</div>
+			</div>
+			
+			<!--地址选择-->
+			<div class="model" @click="addModel=false" v-show="addModel" v-cloak>
+				<div class="model-address inlinkFlex-spacebetween">
+					<!--地区选择-->
+					<div class="addressBox">
+						<ul>
+							<li v-for="provinceItem in addressList" @click.stop="onProvinceSelect($event,provinceItem.value)">
+								<span>{{provinceItem.text}}</span>
+								<div class="cityBox">
+									<ul>
+										<li v-for="cityItem in provinceItem.children" @click.stop="onCitySelect($event,cityItem.value)">
+											<span>{{cityItem.text}}</span>
+											<div class="areaBox">
+												<ul>
+													<li v-for="areaItem in cityItem.children" @click.stop="onAreaSelect($event,areaItem.value)">
+														<span>{{areaItem.text}}</span>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+			<!--提示修改成功弹窗-->
+			<div class="model" v-show="tipModel" v-cloak>
+				<div class="model-content tip-content">
+					<p>{{tipText}}</p>
+					<p @click="tipModel=false">确定</p>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+
+</html>

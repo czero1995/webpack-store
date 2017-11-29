@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<title>订单页面</title>
+	</head>
+
+	<body>
+
+		<div id="app">
+
+			<div class="container" >
+				<div class="header clearfloat" id="topBar">
+					<a href="javascript:history.back()">
+						<img src="../img/icon/arrowBack.png" />
+					</a>
+					<p>订单详情</p>
+				</div>				
+				
+				<div id="order">
+								<div class="orderTop inlinkFlex">
+									<img src="../img/icon/item_address.png" />
+									<div class="address">
+										<div class="inlinkFlex-spacebetween">
+											<p>收件人:深大</p>
+											<p>13641418385</p>
+										</div>
+										<p>收获地址:广东省深圳市龙华花园</p>
+									</div>
+								</div>
+								<div class="orderCenter">
+									<div class="orderItem inlinkFlex">
+										<img src="../img/icon/shop_addCart.png" class="orderImg" />
+										<div class="orderText">
+											<p class="shopTitle">欧诗漫OSM营养美肤组合套装</p>
+											<p>美肤透白护肤化妆品面部护理套装女 营养</p>
+											<div class="orderNum inlinkFlex-spacebetween">
+												<p>数量:1</p>
+												<p class="shopCoach">¥ 1</p>
+											</div>
+										</div>
+									</div>
+									<div class="orderItem inlinkFlex">
+										<img src="../img/icon/shop_addCart.png" class="orderImg" />
+										<div class="orderText">
+											<p>善存Centrum 佳维礼盒</p>
+											<p>1.33g*150片装（新老包装随机发放）</p>
+											<div class="orderNum inlinkFlex-spacebetween">
+												<p>数量:10</p>
+												<p class="shopCoach">¥ 1</p>
+											</div>
+										</div>
+									</div>
+									
+									<div class="wayItem inlinkFlex-spacebetween" v-show="waySelect === 'peisong'">
+										<span>配送时间</span>
+										<div class="inlinkFlex">
+											<p>一小时配送</p>
+											<img src="../img/icon/arrowRight.png" />
+										</div>
+									</div>
+									<div class="wayItem inlinkFlex-spacebetween">
+										<span>支付方式</span>
+										<div class="inlinkFlex">
+											<p>微信付款</p>
+											<img src="../img/icon/arrowRight.png" /></div>
+									</div>									
+								
+								</div>
+
+							</div>
+				<div class="pageBottom inlinkFlex-spacebetween">
+					<div class="bottom-left">
+						<p>商品总金额: <span class="shopCoach">¥1</span> </p>
+					</div>
+					<div class="submitOrder" @click="onSubmitOrder()">提交订单</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+
+</html>

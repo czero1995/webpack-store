@@ -1,0 +1,84 @@
+@white: #fff;
+@grey: #ccc;
+@red: red;
+@black: #000;
+@background: #FAF7FA;
+@textcolor: #000;
+@textsize:.28rem;
+#app{
+    background: @background;
+}
+.container{
+    
+    height: 100%;
+    color:@textcolor;
+    font-size: .26rem;
+}
+.order-item{
+    background: @white;
+    margin-bottom: .2rem;
+       
+}
+.order-top{
+    padding:.2rem;
+}
+
+.order-content{
+   border-bottom: 1px solid @grey;
+   padding: .2rem .2rem .4rem .2rem;
+   align-items: flex-start;
+}
+.order-img{
+    width: 30%;
+    height: 2rem;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.order-text{
+    text-align: right;
+    width: 70%;  
+}
+.order-name{
+    font-size: @textsize;
+    color:@textcolor;
+}
+.order-num{
+    margin: .3rem 0;
+}
+.order-state{
+    color:@red;
+}
+.order-coach{
+    color:@red;
+}
+
+.order-allCoach{
+    text-align: right;
+    height: .8rem;
+    line-height: .8rem;
+    padding-right: .2rem;
+
+}
+.order-op{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    justify-content: flex-end;
+    border-top: 1px solid @grey;
+    p{
+        width: 1.6rem;
+        height: .4rem;
+        line-height: .4rem;
+        text-align: center;
+        margin-right: .2rem;
+    }
+      p:nth-of-type(1){
+          border: 1px solid @grey;
+          
+      }
+    p:nth-of-type(2){
+        border: 1px solid @red;
+        
+    }
+}
