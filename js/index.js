@@ -31,7 +31,7 @@ new Vue({
 		/*获取商品列表*/
 		getGoodsList() {
 			const that = this;
-			axios.get('../data/homeData.json').then(function(res) {
+			axios.get('data/homeData.json').then(function(res) {
 					that.productList = res.data.Data;
 					console.log(that.productList);
 				})
@@ -42,7 +42,7 @@ new Vue({
 		/*获取轮播列表*/
 		getBannerList() {
 			const that = this;
-			axios.get('../data/bannerData.json').then(function(res) {
+			axios.get('data/bannerData.json').then(function(res) {
 					that.bannerList = res.data.Data;
 					console.log(that.bannerList);
 				})

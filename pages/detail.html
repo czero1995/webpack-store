@@ -8,7 +8,7 @@
 	
 	<body>
 		<div id="app">
-			<div class="header clearfloat" id="topBar">
+			<div class="header clearfloat top" id="topBar">
 				<a href="javascript:history.back(-1)">
 					<img src="../img/icon/arrowBack.png" />
 				</a>
@@ -16,7 +16,7 @@
 			</div>
 			<div class="container" v-cloak>
 				<div class="goods-img">
-					<img src="../img/icon/shop_addCart.png" />
+					<img src="../img/goods.jpg" />
 				</div>
 				<div class="goodsBox">
 
@@ -52,7 +52,7 @@
 					<div class="addCart-content" @click.stop="addCartModel=true">
 						<div class="cartModel-box inlinkFlex">
 							<div class="cartModel-img">
-								<img src="../img/icon/shop_addCart.png" />
+								<img src="../img/goods.jpg" />
 							</div>
 							<div class="cartModel-text">
 								<div class="inlinkFlex-spacebetween">
@@ -85,7 +85,7 @@
 					<div class="addCart-content" @click.stop="payModel=true">
 						<div class="cartModel-box inlinkFlex">
 							<div class="cartModel-img">
-								<img src="../img/icon/shop_addCart_select.png" />
+								<img src="../img/goods.jpg"/>
 							</div>
 							<div class="cartModel-text">
 								<div class="inlinkFlex-spacebetween">
@@ -103,7 +103,7 @@
 								<img src="../img/icon/shop_add.png" @click="onAddGoods()" />
 							</div>
 						</div>
-						<a href="paywaitDetail.html">
+						<a href="order.html">
 							<div class="cartModel-pay">
 								下一步
 							</div>

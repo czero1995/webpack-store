@@ -34,3 +34,13 @@ console.log('执行rem布局');
 		}, e.exports = t["default"]
 	}]);
 	flex(100, 1);
+is_weixn();
+function is_weixn() {
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i) == "micromessenger") {
+			document.getElementById('topBar').style.display="none";
+			document.getElementById('topBar').style.padding="0";
+		} else {
+		  console.log('is no wechat');
+	}
+	}

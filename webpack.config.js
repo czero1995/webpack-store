@@ -53,11 +53,6 @@ module.exports = {
 		        test: /\.(htm|html)$/i,
 		        loader: 'html-withimg-loader',
 		   },
-
-//			{
-//				test: /\.(png|jpg)$/,
-//				loader: 'url-loader?limit=8192&name=img/icon/[hash:8].[name].[ext]'			
-//			},
 			   {
 			   	//图片打包
 			   	test:/(\.jpg|\.png|\.gif|\.jpeg)$/, 
@@ -75,13 +70,13 @@ module.exports = {
 	plugins: [
 		new webpack.BannerPlugin('凡几所有，翻版必究'),
 		new ExtractTextPlugin('./css/[name].[chunkhash:8].css'),
-//		new UglifyJSPlugin(),
-		// 代码压缩
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false
-			}
-		}),
+		new UglifyJSPlugin(),
+		 //代码压缩
+		// new webpack.optimize.UglifyJsPlugin({
+		// 	compress: {
+		// 		warnings: false
+		// 	}
+		// }),
 		// html文件输出
 		new HtmlWebpackPlugin({
 			title: '首页',
@@ -99,45 +94,45 @@ module.exports = {
 			inject:'body'
 		}),	
 		new HtmlWebpackPlugin({
-			filename: './pages/category.html',
-			template: './pages/category.html',
 			title:'分类',
+			filename: './pages/category.html',
+			template: './pages/category.html',			
 			chunks: ['rem','category']
 		}),	
 		new HtmlWebpackPlugin({
-			filename: 'pages/cart.html',
-			template: 'pages/cart.html',
 			title:'购物车',
+			filename: 'pages/cart.html',
+			template: 'pages/cart.html',			
 			chunks: ['rem','cart']
 		}),	
 		new HtmlWebpackPlugin({
-			filename: 'pages/member.html',
-			template: 'pages/member.html',
 			title:'个人中心',
+			filename: 'pages/member.html',
+			template: 'pages/member.html',			
 			chunks: ['rem','member']
 		}),	
 		new HtmlWebpackPlugin({
-			filename: 'pages/detail.html',
-			template: 'pages/detail.html',
 			title:'商品详情',
+			filename: 'pages/detail.html',
+			template: 'pages/detail.html',			
 			chunks: ['rem','detail']
 		}),	
 		new HtmlWebpackPlugin({
+			title:'地址列表',
 			filename: 'pages/address.html',
 			template: 'pages/address.html',
-			title:'地址列表',
 			chunks: ['rem','address']
 		}),
 		new HtmlWebpackPlugin({
-			filename: 'pages/addaddress.html',
-			template: 'pages/addaddress.html',
 			title:'添加地址',
+			filename: 'pages/addaddress.html',
+			template: 'pages/addaddress.html',			
 			chunks: ['rem','addaddress','datacity']
 		}),
 		new HtmlWebpackPlugin({
-			filename: 'pages/order.html',
-			template: 'pages/order.html',
 			title:'订单详情',
+			filename: 'pages/order.html',
+			template: 'pages/order.html',			
 			chunks: ['rem','order']
 		}),
 		new CopyWebpackPlugin([{

@@ -12,8 +12,8 @@
 				<p>购物车</p>
 			</div>
 			<div class="container">
-				<div class="cartItem inlinkFlex" v-for="(itemGoods,indexGoods) in cartList">
-					<div class="shopRadio" @click="onShopRadio(itemGoods)">
+				<div class="cartItem inlinkFlex" v-for="(itemGoods,indexGoods) in cartList" @click.stop="onDetail" v-cloak>
+					<div class="shopRadio" @click.stop="onShopRadio(itemGoods)">
 						<img src="../img/icon/radio.png" v-show="!itemGoods.goodsRadio" />
 						<img src="../img/icon/radio_select.png" v-show="itemGoods.goodsRadio" />
 					</div>
@@ -24,7 +24,7 @@
 						<div class="cartText">
 							<div class="inlinkFlex-spacebetween">
 								<p class="text-ellipsis">{{itemGoods.name}}</p>
-								<img src="../img/icon/shop_delect.png" @click="onCartDel(itemGoods)" class="delImg" />
+								<img src="../img/icon/shop_delect.png" @click.stop="onCartDel(itemGoods)" class="delImg" />
 							</div>
 							<p class="itemIntro text-ellipsis">{{itemGoods.intro}}</p>
 							<p class="shopCoach">¥ {{itemGoods.price * itemGoods.count}}</p>
@@ -39,7 +39,7 @@
 			</div>
 			<div class="toolbar tabbar tabbar-labels">
 				<div class="toolbar-inner">
-					<div class="cartBottom-detail inlinkFlex">
+					<div class="cartBottom-detail inlinkFlex" v-cloak>
 						<div class="shopRadio" @click="onShopRadioAll()">
 							<img src="../img/icon/radio.png" v-show="!goodsRadioAll" />
 							<img src="../img/icon/radio_select.png" v-show="goodsRadioAll" />
