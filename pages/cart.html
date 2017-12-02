@@ -11,7 +11,7 @@
 			<div class="top" id="topBar">
 				<p>购物车</p>
 			</div>
-			<div class="container">
+			<div id="container">
 				<div class="cartItem inlinkFlex" v-for="(itemGoods,indexGoods) in cartList" @click.stop="onDetail" v-cloak>
 					<div class="shopRadio" @click.stop="onShopRadio(itemGoods)">
 						<img src="../img/icon/radio.png" v-show="!itemGoods.goodsRadio" />

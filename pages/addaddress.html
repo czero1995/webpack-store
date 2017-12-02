@@ -16,7 +16,7 @@
 					</a>
 					<p>收获地址管理</p>
 				</div>
-			<div class="container" v-cloak>
+			<div id="container" v-cloak>
 
 				
 				<div class="content">
@@ -51,7 +51,7 @@
 			</div>
 			
 			<!--地址选择-->
-			<div class="model" v-show="addressModel" @click="addressModel = false">
+			<div class="model" v-show="addressModel" @click="addressModel = false" v-cloak>
 				<div class="model-content-city" @click.stop="addressModel = true">
 					<div class="addressBox">
 						<ul>

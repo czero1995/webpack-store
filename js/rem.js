@@ -39,7 +39,7 @@ function is_weixn() {
 		var ua = navigator.userAgent.toLowerCase();
 		if(ua.match(/MicroMessenger/i) == "micromessenger") {
 			document.getElementById('topBar').style.display="none";
-			document.getElementById('topBar').style.padding="0";
+			document.getElementById('container').style.padding="0";
 		} else {
 		  console.log('is no wechat');
 	}
