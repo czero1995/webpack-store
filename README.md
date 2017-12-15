@@ -11,9 +11,7 @@ Vue官方提供了Vue-Cli脚手架，集成了Webpack的环境，上手开发和
 ### 项目模板效果:
 ![](https://user-gold-cdn.xitu.io/2017/12/2/1601626448873052?w=500&h=884&f=gif&s=116721)
 
-项目开源在Github,欢迎star。[github地址](https://github.com/czero1995/webpack-store)
-
-在线预览:[http://corange.czero.cn/store/index.html](http://corange.czero.cn/store/index.html)
+在线预览:[http://corange.czero.cn/store/index.html](http://github.czero.cn/store/index.html)
 
 # 项目描述
 静态页面是用的阿里团队的rem和flex弹性布局。
