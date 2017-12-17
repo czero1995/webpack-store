@@ -21,7 +21,7 @@
 						<div class="categoryItem inlinkFlex" v-for="oneItem in oneList.OneProduct">
 							<a href="detail.html" class="inlinkFlex" style="width: 100%;">
 								<div class="shopImg">
-									<img :src="oneItem.GoodsImage" />
+									<img v-lazy="oneItem.GoodsImage" />
 								</div>
 								<div class="shopText">
 									<p v-text="">{{oneItem.GoodsName}}</p>
@@ -37,7 +37,7 @@
 						<div class="categoryItem inlinkFlex" v-for="twoItem in twoList.TwoProduct">
 							<a href="detail.html" class="external inlinkFlex">
 								<div class="shopImg">
-									<img :src="twoItem.GoodsImage" />
+									<img v-lazy="twoItem.GoodsImage" />
 								</div>
 								<div class="shopText">
 									<p>{{twoItem.GoodsName}}</p>
@@ -53,7 +53,7 @@
 						<div class="categoryItem inlinkFlex" v-for="threeItem in threeList.ThreeProduct">
 							<a href="detail.html" class="external inlinkFlex">
 								<div class="shopImg">
-									<img :src="threeItem.GoodsImage" />
+									<img v-lazy="threeItem.GoodsImage" />
 								</div>
 								<div class="shopText">
 									<p>{{threeItem.GoodsName}}</p>
@@ -69,7 +69,7 @@
 						<div class="categoryItem inlinkFlex" v-for="fourItem in fourList.FourProduct">
 							<a href="detail.html" class="external inlinkFlex">
 								<div class="shopImg">
-									<img :src="fourItem.GoodsImage" />
+									<img v-lazy="fourItem.GoodsImage" />
 								</div>
 								<div class="shopText">
 									<p>{{fourItem.GoodsName}}</p>
@@ -85,7 +85,7 @@
 						<div class="categoryItem inlinkFlex" v-for="fiveItem in fiveList.FiveProduct">
 							<a href="detail.html" class="external inlinkFlex">
 								<div class="shopImg">
-									<img :src="fiveItem.GoodsImage" />
+									<img v-lazy="fiveItem.GoodsImage" />
 								</div>
 								<div class="shopText">
 									<p>{{fiveItem.GoodsName}}</p>
@@ -101,7 +101,7 @@
 						<div class="categoryItem inlinkFlex" v-for="sixItem in sixList.SixProduct">
 							<a href="detail.html" class="external inlinkFlex">
 								<div class="shopImg">
-									<img :src="sixItem.GoodsImage" />
+									<img v-lazy="sixItem.GoodsImage" />
 								</div>
 								<div class="shopText">
 									<p>{{sixItem.GoodsName}}</p>

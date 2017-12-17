@@ -18,7 +18,7 @@
 						<img src="../img/icon/radio_select.png" v-show="itemGoods.goodsRadio" />
 					</div>
 					<div class="cartImage">
-						<img :src="itemGoods.image" />
+						<img v-lazy="itemGoods.image" />
 					</div>
 					<div class="cartDetail inlinkFlex-spacebetween">
 						<div class="cartText">
