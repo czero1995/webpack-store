@@ -1,4 +1,3 @@
-var axios = require('axios');
-import Vue from 'vue/dist/vue.common.js';
+import{axios,Vue} from '../js/base';
 import '../less/base.less';
 import '../less/address.less';

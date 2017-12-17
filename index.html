@@ -35,11 +35,11 @@
 								</div>
 							</div>
 						</a>
-						<div class="productBox inlinkFlex-spacebetween">
+						<div class="productBox inlinkFlex-spacebetween" v-cloak>
 							<div class="productItem inlinkFlex" v-for="goodsItem in productItem.SalesProduct">
 								<div class="itemBox">
 									<a href="pages/detail.html">
-										<img :src="goodsItem.GoodsImage" class="itemImg" />
+										<img v-lazy="goodsItem.GoodsImage" class="itemImg" />
 										<div class="itemText">
 											<p class="text-ellipsis">{{goodsItem.GoodsName}}</p>
 											<p class="itemIntro text-ellipsis">{{goodsItem.GoodsInfo}}</p>

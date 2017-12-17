@@ -1,4 +1,4 @@
-import Vue from 'vue/dist/vue.common.js';
+import{Vue} from '../js/base';
 import '../less/address.less';
 import {init_city_picker} from '../js/datacity.js';
 new Vue({

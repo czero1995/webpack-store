@@ -5,7 +5,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin"); /*提取css到
 const HtmlWebpackPlugin = require('html-webpack-plugin'); /*生成html*/
 const CopyWebpackPlugin = require('copy-webpack-plugin'); /*复制文件*/
 const CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin'); /*精简输出*/
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')/*精简输出*/
+
 module.exports = {
 	entry: {
 		rem: './js/rem.js',		/*动态计算rem*/
@@ -20,11 +21,9 @@ module.exports = {
 		datacity :'./js/datacity.js', /*三级联动地址数据*/
 		order: './js/order.js' /*订单*/
 	},
-	devtool: 'inline-source-map',   //开启调试模式
 	output: {
 		path: path.resolve(__dirname, "./build"),
 		filename: "./js/[name].[chunkhash:8].js",    //输出的文件加入hash值
-//		publicPath:'build/'
 	},
 	module: {
 		loaders: [{
@@ -68,15 +67,8 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new webpack.BannerPlugin('凡几所有，翻版必究'),
+		new webpack.BannerPlugin('xx所有，翻版必究'),
 		new ExtractTextPlugin('./css/[name].[chunkhash:8].css'),
-		new UglifyJSPlugin(),
-		 //代码压缩
-		// new webpack.optimize.UglifyJsPlugin({
-		// 	compress: {
-		// 		warnings: false
-		// 	}
-		// }),
 		// html文件输出
 		new HtmlWebpackPlugin({
 			title: '首页',
@@ -97,43 +89,106 @@ module.exports = {
 			title:'分类',
 			filename: './pages/category.html',
 			template: './pages/category.html',			
-			chunks: ['rem','category']
+			chunks: ['rem','category'],
+			hash:true,
+			cach:true,
+			minify:{
+				caseSensitive:false, //是否大小写敏感
+				removeComments:true, //去除注释
+				removeEmptyAttributes:true,//去除空属性
+				collapseWhitespace:true //是否去除空格
+			},
+			inject:'body'
 		}),	
 		new HtmlWebpackPlugin({
 			title:'购物车',
 			filename: 'pages/cart.html',
 			template: 'pages/cart.html',			
-			chunks: ['rem','cart']
+			chunks: ['rem','cart'],
+			hash:true,
+			cach:true,
+			minify:{
+				caseSensitive:false, //是否大小写敏感
+				removeComments:true, //去除注释
+				removeEmptyAttributes:true,//去除空属性
+				collapseWhitespace:true //是否去除空格
+			},
+			inject:'body'
 		}),	
 		new HtmlWebpackPlugin({
 			title:'个人中心',
 			filename: 'pages/member.html',
 			template: 'pages/member.html',			
-			chunks: ['rem','member']
+			chunks: ['rem','member'],
+			hash:true,
+			cach:true,
+			minify:{
+				caseSensitive:false, //是否大小写敏感
+				removeComments:true, //去除注释
+				removeEmptyAttributes:true,//去除空属性
+				collapseWhitespace:true //是否去除空格
+			},
+			inject:'body'
 		}),	
 		new HtmlWebpackPlugin({
 			title:'商品详情',
 			filename: 'pages/detail.html',
 			template: 'pages/detail.html',			
-			chunks: ['rem','detail']
+			chunks: ['rem','detail'],
+			hash:true,
+			cach:true,
+			minify:{
+				caseSensitive:false, //是否大小写敏感
+				removeComments:true, //去除注释
+				removeEmptyAttributes:true,//去除空属性
+				collapseWhitespace:true //是否去除空格
+			},
+			inject:'body'
 		}),	
 		new HtmlWebpackPlugin({
 			title:'地址列表',
 			filename: 'pages/address.html',
 			template: 'pages/address.html',
-			chunks: ['rem','address']
+			chunks: ['rem','address'],
+			hash:true,
+			cach:true,
+			minify:{
+				caseSensitive:false, //是否大小写敏感
+				removeComments:true, //去除注释
+				removeEmptyAttributes:true,//去除空属性
+				collapseWhitespace:true //是否去除空格
+			},
+			inject:'body'
 		}),
 		new HtmlWebpackPlugin({
 			title:'添加地址',
 			filename: 'pages/addaddress.html',
 			template: 'pages/addaddress.html',			
-			chunks: ['rem','addaddress','datacity']
+			chunks: ['rem','addaddress','datacity'],
+			hash:true,
+			cach:true,
+			minify:{
+				caseSensitive:false, //是否大小写敏感
+				removeComments:true, //去除注释
+				removeEmptyAttributes:true,//去除空属性
+				collapseWhitespace:true //是否去除空格
+			},
+			inject:'body'
 		}),
 		new HtmlWebpackPlugin({
 			title:'订单详情',
 			filename: 'pages/order.html',
 			template: 'pages/order.html',			
-			chunks: ['rem','order']
+			chunks: ['rem','order'],
+			hash:true,
+			cach:true,
+			minify:{
+				caseSensitive:false, //是否大小写敏感
+				removeComments:true, //去除注释
+				removeEmptyAttributes:true,//去除空属性
+				collapseWhitespace:true //是否去除空格
+			},
+			inject:'body'
 		}),
 		new CopyWebpackPlugin([{
 		    from: __dirname + '/data',
@@ -143,18 +198,13 @@ module.exports = {
 		 new CommonsChunkPlugin({
 		       name:"rem",
 		  }),
+		  new UglifyJsPlugin(),
 		new CleanWebpackPlugin(['build']) //编译前先清除文件夹
 	],
 
 	// 全局引用jquery
 	externals: {
 		jquery: 'window.$',
-	},
-	//构建本地服务器的相关配置 需要在`package.json`里面激活
-	devServer: {
-		contentBase:'./build',
-		historyApiFallback: true, //不跳转
-		inline: true,//实时刷新,
 	},
 
 }

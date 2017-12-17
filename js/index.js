@@ -1,9 +1,11 @@
-var $ = require('jquery');
-var axios = require('axios');
-import Vue from 'vue/dist/vue.common.js';
+
 import '../less/index.less';
 import '../css/swiper.min.css';
 import '../js/swiper.js';
+import{axios,Vue} from '../js/base';
+
+
+	
 new Vue({
 	el: '#app',
 	data: {

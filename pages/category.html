@@ -15,7 +15,7 @@
 				<div class="leftbar">
 					<p class="barItem" v-for="categoryItem in categoryList" :class="{active:bar === categoryItem.Category.TopNum}" @click="onBar(categoryItem.Category.TopNum)">{{categoryItem.Category.TopText}}</p>
 				</div>
-				<div class="rightContent">
+				<div class="rightContent" v-cloak>
 
 					<div v-show="bar === 'one'">
 						<div class="categoryItem inlinkFlex" v-for="oneItem in oneList.OneProduct">
@@ -24,7 +24,7 @@
 									<img :src="oneItem.GoodsImage" />
 								</div>
 								<div class="shopText">
-									<p>{{oneItem.GoodsName}}</p>
+									<p v-text="">{{oneItem.GoodsName}}</p>
 									<p class="shopIntro">{{oneItem.GoodsInfo}}</p>
 									<p class="shopCoach">¥ {{oneItem.GoodsPrice}}</p>
 									

@@ -3,8 +3,8 @@
 预览地址 ：[http://corange.czero.cn/store/index.html]()
 
 	npm install
-	npm run server
-	webpack
+	npm run dev
+	npm run build
 	
 Vue官方提供了Vue-Cli脚手架，集成了Webpack的环境，上手开发和构建非常方便。但Vue-cli适用于单页应用，而平常做的项目中往往都是多页的，网上看了很多Webpack多页面的配置，中间遇到很多坑，自己看文档，对着做出了这个多页面的商城模板。
  
@@ -201,4 +201,4 @@ https://doc.webpack-china.org/guides/
 ### devServer:
 	安装devserver可以构建本地服务器，每次修改和保存都会自动的刷新页面
 ### postcss.config.js
-	配置postcss主要是为了解决css样式在有些浏览器兼容的原因，会自动给你添加后缀
+	配置postcss主要是为了解决css样式在有些浏览器兼容的原因，会自动给你添加

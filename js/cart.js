@@ -1,5 +1,4 @@
-var axios = require('axios');
-import Vue from 'vue/dist/vue.common.js';
+import{axios,Vue} from '../js/base';
 import '../less/cart.less';
 new Vue({
 	el: '#app',

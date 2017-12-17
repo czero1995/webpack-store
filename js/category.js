@@ -1,6 +1,4 @@
-var $ = require('jquery');
-var axios = require('axios');
-import Vue from 'vue/dist/vue.common.js';
+import{axios,Vue} from '../js/base';
 import '../less/category.less';
 new Vue({
 	el: '#app',

@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --inline",
-    "server": "webpack-dev-server --open"
-  },
+    "build": "webpack",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --open",
+    "start": "npm run dev"
+  },  
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -29,6 +29,7 @@
     "style-loader": "^0.19.0",
     "uglifyjs-webpack-plugin": "^1.1.0",
     "vue": "^2.5.3",
+    "vue-lazyload": "^1.1.4",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
   },
